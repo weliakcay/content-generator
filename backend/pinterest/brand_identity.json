@@ -1,0 +1,92 @@
+{
+  "brand_name": "Wellco Adult",
+  "tagline": "Wellness Meets Intimacy",
+  "website": "https://wellcoadult.com",
+
+  "brand_voice": {
+    "tone": "Samimi, bilgilendirici, empowering ama asla utangaç değil",
+    "personality": [
+      "Güvenilir bir arkadaş gibi konuşur",
+      "Tabuları yıkar ama saygılı kalır",
+      "Bilimsel bilgiyi anlaşılır dille aktarır",
+      "Pozitif ve cesaretlendirici",
+      "Modern ve açık fikirli"
+    ],
+    "language": "Türkçe (günlük, samimi, anlaşılır)",
+    "emoji_usage": "Ölçülü - pin başına 2-4 emoji, gülücük yerine tematik emojiler (💜🌸✨🕯️)"
+  },
+
+  "target_audience": {
+    "age_range": "25-45",
+    "gender": "Kadın ağırlıklı (%80+)",
+    "demographics": "Şehirli, eğitimli, modern, dijital okuryazar",
+    "psychographics": [
+      "Kendine bakımı önemseyen",
+      "Cinsel sağlık konusunda açık fikirli",
+      "Wellness trendlerini takip eden",
+      "İlişkilerinde kaliteyi arayan",
+      "Tabuları sorgulayan"
+    ],
+    "pain_points": [
+      "Cinsel sağlık hakkında güvenilir bilgi bulmak zor",
+      "Intimate wellness ürünleri hakkında utanç hissi",
+      "İlişkide iletişim sorunları",
+      "Self-care rutininde derinlik eksikliği"
+    ]
+  },
+
+  "visual_identity": {
+    "primary_color": "#7B3F72",
+    "secondary_colors": ["#E8788A", "#9B72CF", "#D4A76A"],
+    "neutral_colors": ["#F5F0F0", "#2D2D2D", "#FFFFFF"],
+    "font_heading": "Playfair Display / Montserrat Bold",
+    "font_body": "Montserrat Light / Lato",
+    "style_keywords": ["elegant", "modern", "warm", "inclusive", "premium"],
+    "photography_mood": "Warm, soft, intimate ama asla müstehcen değil. Dolaylı anlatım, ışık-gölge oyunu, detay çekimler."
+  },
+
+  "content_pillars": [
+    {
+      "name": "Intimate Wellness",
+      "weight": 0.25,
+      "topics": ["cinsel sağlık", "intimate care", "pleasure wellness", "beden farkındalığı"]
+    },
+    {
+      "name": "İlişki & İletişim",
+      "weight": 0.20,
+      "topics": ["iletişim", "empati", "sevgi dili", "çift terapisi ipuçları", "bağ kurma"]
+    },
+    {
+      "name": "Self-Care",
+      "weight": 0.20,
+      "topics": ["kendine bakım", "ritüel", "mindfulness", "rahatlama", "me-time"]
+    },
+    {
+      "name": "Kadın Sağlığı",
+      "weight": 0.20,
+      "topics": ["pelvik taban", "hormonal sağlık", "menstrüel sağlık", "menopoz", "beden"]
+    },
+    {
+      "name": "Empowerment",
+      "weight": 0.15,
+      "topics": ["özgüven", "beden pozitifliği", "güçlü kadın", "tabu yıkma", "normalleştirme"]
+    }
+  ],
+
+  "dont_use": [
+    "Vulgar veya kaba dil",
+    "Aşırı cinsel veya müstehcen ifadeler",
+    "Utandırıcı veya yargılayıcı ton",
+    "Tıbbi tavsiye niteliğinde kesin ifadeler ('şifa verir', 'tedavi eder')",
+    "Rakip marka isimleri",
+    "Politik veya bölücü içerik",
+    "Body shaming veya karşılaştırma",
+    "Clickbait veya yanıltıcı başlıklar"
+  ],
+
+  "must_include": {
+    "every_pin": ["Marka hashtag'i: #wellcoadult", "CTA (kaydet, takip et, yorum yap)"],
+    "weekly": ["En az 1 eğitici/bilgilendirici içerik", "En az 1 ilham verici/motivasyon içeriği"],
+    "monthly": ["Ürün entegreli içerik (dolaylı, doğal)", "Kullanıcı etkileşimli içerik (soru, anket)"]
+  }
+}

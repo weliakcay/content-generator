@@ -1,0 +1,118 @@
+{
+  "platform": "Pinterest",
+  "api_version": "v5",
+
+  "pin_specs": {
+    "image_ratio": "2:3",
+    "recommended_size": "1000x1500px",
+    "min_size": "600x900px",
+    "max_file_size_mb": 20,
+    "formats": ["JPG", "PNG"],
+    "title_max_chars": 100,
+    "description_max_chars": 500,
+    "alt_text_max_chars": 500,
+    "hashtags_max": 20,
+    "hashtags_recommended": "5-8"
+  },
+
+  "seo_rules": {
+    "title": [
+      "İlk 40 karakterde ana anahtar kelime olmalı",
+      "Rakam kullanmak tıklama oranını artırır (örn: '5 İpucu', '7 Adım')",
+      "Soru formatı ilgi çeker (örn: 'Biliyor muydunuz?')",
+      "Her kelimenin ilk harfi büyük (Title Case) veya doğal cümle formatı",
+      "Clickbait'ten kaçın, değer vaat et"
+    ],
+    "description": [
+      "İlk 50 karaktere anahtar kelimeyi yerleştir",
+      "CTA (Call to Action) mutlaka ekle: 'Kaydet', 'Pin'le', 'Daha fazlası için takip et'",
+      "İlgili anahtar kelimeleri doğal şekilde serpiştir",
+      "Emoji kullanımı dikkat çeker ama abartma (2-4 emoji yeterli)",
+      "Link eklenecekse açıklamada belirt"
+    ],
+    "hashtags": [
+      "5-8 arası hashtag ideal",
+      "Çok genel (#love) ve çok niş (#wellcoadultistanbul) karışımı",
+      "Türkçe + İngilizce karışık kullan",
+      "Trending hashtag'leri takip et",
+      "Marka hashtag'i her zaman dahil et: #wellcoadult"
+    ],
+    "alt_text": [
+      "Görseli detaylı tanımla (renk, obje, atmosfer)",
+      "Anahtar kelimeleri doğal şekilde ekle",
+      "Erişilebilirlik için açıklayıcı ol",
+      "Keyword stuffing yapma"
+    ]
+  },
+
+  "best_posting_times": {
+    "pazartesi": {"optimal": "20:00-22:00", "alternative": "12:00-14:00"},
+    "sali": {"optimal": "20:00-22:00", "alternative": "14:00-16:00"},
+    "carsamba": {"optimal": "12:00-14:00", "alternative": "20:00-22:00"},
+    "persembe": {"optimal": "14:00-16:00", "alternative": "20:00-22:00"},
+    "cuma": {"optimal": "15:00-17:00", "alternative": "20:00-22:00"},
+    "cumartesi": {"optimal": "10:00-12:00", "alternative": "20:00-22:00"},
+    "pazar": {"optimal": "10:00-12:00", "alternative": "19:00-21:00"}
+  },
+
+  "content_guidelines": {
+    "do": [
+      "Yüksek kaliteli, profesyonel görseller kullan",
+      "Dikey (portrait) format her zaman tercih et",
+      "Text overlay ekle ama görselin %20-30'unu geçmesin",
+      "Marka renklerini tutarlı kullan",
+      "Her pin'e net bir CTA ekle",
+      "Mevsimsel ve güncel içerik üret",
+      "Kaydetmeye değer, referans niteliğinde içerik yap",
+      "Listicle format (5 ipucu, 7 adım vb.) yüksek save alır"
+    ],
+    "dont": [
+      "Aşırı cinsel veya müstehcen görsel kullanma",
+      "Pinterest topluluk kurallarını ihlal etme",
+      "Düşük çözünürlüklü veya bulanık görsel kullanma",
+      "Text'i görselin tamamını kaplamasına izin verme",
+      "Spam niteliğinde hashtag kullanma",
+      "Yanıltıcı başlık veya açıklama yazma",
+      "Aynı pin'i tekrar tekrar paylaşma",
+      "Clickbait kullanma"
+    ]
+  },
+
+  "board_categories": {
+    "İlişki İpuçları & İletişim": {
+      "pinterest_category": "relationships",
+      "keywords": ["ilişki", "iletişim", "çift", "empati", "sevgi dili", "bağ", "partner"],
+      "content_types": ["infographic", "tips_list", "quote"]
+    },
+    "Kadın Sağlığı & Wellness": {
+      "pinterest_category": "health",
+      "keywords": ["kadın sağlığı", "pelvik taban", "hormonal denge", "wellness", "sağlık", "beden"],
+      "content_types": ["infographic", "educational", "tips_list"]
+    },
+    "Self-Care Ritüelleri": {
+      "pinterest_category": "beauty",
+      "keywords": ["self-care", "kendine bakım", "ritüel", "rahatlama", "banyo", "mindfulness"],
+      "content_types": ["mood_board", "flat_lay", "quote", "routine"]
+    },
+    "Intimate Wellness Rehberi": {
+      "pinterest_category": "health",
+      "keywords": ["intimate wellness", "cinsel sağlık", "cinsel wellness", "pleasure", "beden farkındalığı"],
+      "content_types": ["educational", "infographic", "myth_busting"]
+    },
+    "Özgüven & Beden Pozitifliği": {
+      "pinterest_category": "quotes",
+      "keywords": ["özgüven", "beden olumlama", "body positive", "kendini sev", "güçlü kadın"],
+      "content_types": ["quote", "statement", "empowerment"]
+    },
+    "Çiftler İçin Aktiviteler": {
+      "pinterest_category": "relationships",
+      "keywords": ["çift aktivite", "date night", "romantik", "birlikte", "eğlenceli"],
+      "content_types": ["tips_list", "idea_board", "romantic"]
+    },
+    "Wellness Alıntılar & Motivasyon": {
+      "pinterest_category": "quotes",
+      "keywords": ["motivasyon", "ilham", "alıntı", "pozitif", "afirmasyon", "wellness"],
+      "content_types": ["quote", "affirmation", "minimal_text"]
+    }
+  }
+}

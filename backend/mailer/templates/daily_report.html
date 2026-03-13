@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellco Adult | {{ turkish_date }} - Günlük İçerik Stratejisi</title>
+  <style>
+    body { margin: 0; padding: 0; background-color: #f5f0ff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; }
+    .container { max-width: 640px; margin: 0 auto; background: #ffffff; }
+    .header { background: linear-gradient(135deg, #7c3aed, #a855f7); padding: 32px 24px; text-align: center; }
+    .header h1 { color: #fff; margin: 0; font-size: 24px; }
+    .header p { color: #e9d5ff; margin: 8px 0 0; font-size: 14px; }
+    .highlights { background: #faf5ff; padding: 24px; border-bottom: 1px solid #e9d5ff; }
+    .highlights h2 { color: #7c3aed; font-size: 18px; margin: 0 0 16px; }
+    .highlight-item { padding: 8px 0; font-size: 14px; line-height: 1.5; }
+    .highlight-item span { color: #7c3aed; font-weight: bold; }
+    .section { padding: 24px; border-bottom: 1px solid #f0e6ff; }
+    .section-title { color: #7c3aed; font-size: 18px; margin: 0 0 16px; display: flex; align-items: center; gap: 8px; }
+    .suggestion-card { background: #faf5ff; border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #e9d5ff; }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .card-title { font-size: 16px; font-weight: bold; color: #1f2937; }
+    .viral-badge { background: #7c3aed; color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+    .viral-high { background: #ef4444; }
+    .viral-medium { background: #f59e0b; }
+    .card-label { color: #7c3aed; font-size: 12px; font-weight: bold; text-transform: uppercase; margin: 12px 0 4px; }
+    .card-text { font-size: 14px; line-height: 1.6; color: #374151; }
+    .hashtags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .hashtag { background: #ede9fe; color: #7c3aed; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+    .time-box { background: #ecfdf5; border-radius: 8px; padding: 10px 14px; margin-top: 8px; }
+    .time-box strong { color: #059669; }
+    .cta-box { background: #fef3c7; border-radius: 8px; padding: 10px 14px; margin-top: 8px; }
+    .cta-box strong { color: #d97706; }
+    .search-log { font-size: 13px; padding: 6px 0; border-bottom: 1px solid #f3e8ff; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-box { background: #faf5ff; border-radius: 8px; padding: 16px; text-align: center; border: 1px solid #e9d5ff; }
+    .stat-value { font-size: 28px; font-weight: bold; color: #7c3aed; }
+    .stat-label { font-size: 12px; color: #6b7280; margin-top: 4px; }
+    .footer { background: #f5f0ff; padding: 24px; text-align: center; }
+    .footer a { color: #7c3aed; text-decoration: none; font-weight: bold; }
+    .footer p { font-size: 12px; color: #9ca3af; margin: 8px 0 0; }
+    .platform-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; color: #fff; }
+    .platform-pinterest { background: #e60023; }
+    .platform-instagram { background: #e1306c; }
+    .platform-tiktok { background: #000000; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Wellco Adult</h1>
+      <p>{{ turkish_date }} - Günlük İçerik Stratejisi</p>
+    </div>
+
+    <!-- Highlights -->
+    <div class="highlights">
+      <h2>🎯 BUGÜNÜN ÖNE ÇIKANLARI</h2>
+      {% for highlight in highlights %}
+      <div class="highlight-item">
+        <span>{{ highlight.icon }}</span> {{ highlight.text }}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Pinterest Suggestions -->
+    {% set pinterest_suggestions = suggestions | selectattr("platform", "equalto", "pinterest") | list %}
+    {% if pinterest_suggestions %}
+    <div class="section">
+      <h2 class="section-title">📌 PINTEREST ÖNERİLERİ ({{ pinterest_suggestions | length }} adet)</h2>
+      {% for s in pinterest_suggestions %}
+      {% include "suggestion_card.html" %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Instagram Suggestions -->
+    {% set instagram_suggestions = suggestions | selectattr("platform", "equalto", "instagram") | list %}
+    {% if instagram_suggestions %}
+    <div class="section">
+      <h2 class="section-title">📸 INSTAGRAM ÖNERİLERİ ({{ instagram_suggestions | length }} adet)</h2>
+      {% for s in instagram_suggestions %}
+      {% include "suggestion_card.html" %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- TikTok Suggestions -->
+    {% set tiktok_suggestions = suggestions | selectattr("platform", "equalto", "tiktok") | list %}
+    {% if tiktok_suggestions %}
+    <div class="section">
+      <h2 class="section-title">🎵 TIKTOK ÖNERİLERİ ({{ tiktok_suggestions | length }} adet)</h2>
+      {% for s in tiktok_suggestions %}
+      {% include "suggestion_card.html" %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Search Logs -->
+    {% if search_logs %}
+    <div class="section">
+      <h2 class="section-title">🔍 BUGÜNKÜ ARAMALAR</h2>
+      {% for log in search_logs %}
+      <div class="search-log">
+        <span class="platform-badge platform-{{ log.platform }}">{{ log.platform }}</span>
+        "{{ log.query }}" → {{ log.results_count }} sonuç
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Stats -->
+    <div class="section">
+      <h2 class="section-title">📊 SİSTEM İSTATİSTİKLERİ</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-value">{{ total_suggestions }}</div>
+          <div class="stat-label">Toplam Öneri</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">{{ avg_viral_score }}/100</div>
+          <div class="stat-label">Ort. Viral Skor</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">{{ trends_found }}</div>
+          <div class="stat-label">Trend Bulundu</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">{{ platforms_scraped }}</div>
+          <div class="stat-label">Platform Tarandı</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="{{ dashboard_url }}">Dashboard'da detaylara göz at →</a>
+      <p>Wellco Adult İçerik Üretici Sistemi</p>
+    </div>
+  </div>
+</body>
+</html>

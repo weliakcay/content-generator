@@ -1,0 +1,5 @@
+{
+  "extra_instructions": "Her pin için somut, uygulanabilir bilgi ver. Genel motivasyon cümleleri yerine okuyucunun hayatında uygulayabileceği pratik ipuçları sun. Pin'i kaydeden kişi tekrar dönüp bakacak kadar değerli içerik üret.",
+  "quality_notes": "KALİTE KONTROL:\n- Açıklama minimum 300 karakter olmalı\n- Her pin'de en az 3 somut ipucu/bilgi olmalı\n- 'Daha fazla bilgi için takip et' gibi boş CTA'lar YASAK, bunun yerine spesifik değer vaat et\n- Görsel prompt'ta ASLA placeholder/örnek metin kullanma, gerçek içerik yaz",
+  "visual_prompt_guide": "- Infographic için: Her step/madde için GERÇEK Türkçe metin yaz (ör: '1. Partnerinize gün içinde en az 3 kez göz teması kurun')\n- Quote için: Tam Türkçe alıntı metnini yaz (ör: 'Kendini sevmek, başkalarını sevmenin ilk adımıdır')\n- Lifestyle için: Sahnedeki her objeyi, rengi, ışığı, atmosferi detaylı tarif et\n- Marka logosu veya adı görselde OLMAMALI\n- Text overlay max görselin %25'i kadar alan kaplamalı"
+}

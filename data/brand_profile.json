@@ -1,0 +1,43 @@
+{
+  "brand_name": "Wellco Adult",
+  "tone_of_voice": "Samimi, bilgilendirici, empowering ama asla utangaç değil",
+  "core_values": ["Wellness", "Self-care", "Intimacy", "Confidence"],
+  "target_audience": "25-45 yaş, kadın ağırlıklı, modern, açık fikirli",
+  "product_categories": [
+    "Intimate wellness products",
+    "Self-care items",
+    "Relationship enhancement"
+  ],
+  "dont_use": ["Vulgar dil", "Aşırı cinsel içerik", "Utandırıcı tonlar"],
+  "language": "Turkish",
+  "platforms": {
+    "pinterest": {
+      "priority": "high",
+      "style": "Estetik, ilham verici, pin-friendly",
+      "daily_suggestions": 2,
+      "content_types": ["pin", "board"],
+      "preferred_formats": ["infographic", "product-showcase", "tip-list"]
+    },
+    "instagram": {
+      "priority": "high",
+      "style": "Hikaye anlatıcı, relatable, görsel odaklı",
+      "daily_suggestions": 2,
+      "content_types": ["post", "reel", "story", "carousel"],
+      "preferred_formats": ["educational-carousel", "product-photo", "reel"]
+    },
+    "tiktok": {
+      "priority": "medium",
+      "style": "Trend-aligned, eğlenceli, educational",
+      "daily_suggestions": 1,
+      "content_types": ["video"],
+      "preferred_formats": ["educational-short", "trend-hop", "myth-busting"]
+    }
+  },
+  "content_guidelines": {
+    "max_hashtags": 15,
+    "use_emojis": true,
+    "include_cta": true,
+    "sfw_only": true
+  },
+  "updated_at": "2026-02-15T00:00:00Z"
+}

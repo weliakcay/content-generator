@@ -1,0 +1,85 @@
+{
+  "influencers": [
+    {
+      "name": "Örnek influencer",
+      "platform": "instagram",
+      "handle": "@username",
+      "relevance": "Wellness content creator",
+      "added_date": "2026-02-15",
+      "active": true
+    }
+  ],
+  "hashtags": [
+    {
+      "tag": "#intimatewellness",
+      "platform": "instagram",
+      "priority": "high",
+      "added_date": "2026-02-15"
+    },
+    {
+      "tag": "#selfcare",
+      "platform": "instagram",
+      "priority": "high",
+      "added_date": "2026-02-15"
+    },
+    {
+      "tag": "#wellnessproducts",
+      "platform": "instagram",
+      "priority": "medium",
+      "added_date": "2026-02-15"
+    },
+    {
+      "tag": "#kendinebakim",
+      "platform": "instagram",
+      "priority": "high",
+      "added_date": "2026-02-15"
+    },
+    {
+      "tag": "#selfcaresunday",
+      "platform": "pinterest",
+      "priority": "high",
+      "added_date": "2026-02-15"
+    },
+    {
+      "tag": "#wellnessroutine",
+      "platform": "pinterest",
+      "priority": "medium",
+      "added_date": "2026-02-15"
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "self care routine",
+      "platforms": ["pinterest", "tiktok"],
+      "search_frequency": "daily"
+    },
+    {
+      "keyword": "intimate wellness",
+      "platforms": ["pinterest", "instagram"],
+      "search_frequency": "daily"
+    },
+    {
+      "keyword": "wellness products",
+      "platforms": ["pinterest", "instagram", "tiktok"],
+      "search_frequency": "daily"
+    },
+    {
+      "keyword": "healthy relationship tips",
+      "platforms": ["tiktok", "instagram"],
+      "search_frequency": "daily"
+    },
+    {
+      "keyword": "kendine bakım rutini",
+      "platforms": ["instagram", "tiktok"],
+      "search_frequency": "daily"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Rakip marka",
+      "platforms": ["instagram", "pinterest"],
+      "monitor": true
+    }
+  ],
+  "updated_at": "2026-02-15T00:00:00Z"
+}

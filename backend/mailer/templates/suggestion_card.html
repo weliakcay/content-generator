@@ -1,0 +1,47 @@
+<div class="suggestion-card">
+  <div class="card-header">
+    <div>
+      <span class="platform-badge platform-{{ s.platform }}">{{ s.platform }}</span>
+      <span style="font-size: 12px; color: #6b7280; margin-left: 8px;">{{ s.content_type }}</span>
+    </div>
+    <div class="viral-badge {% if s.viral_score >= 85 %}viral-high{% elif s.viral_score >= 70 %}{% else %}viral-medium{% endif %}">
+      🔥 {{ s.viral_score | int }}/100
+    </div>
+  </div>
+
+  <div class="card-title">{{ s.title }}</div>
+
+  {% if s.trend_source %}
+  <div style="font-size: 12px; color: #7c3aed; margin-top: 4px;">
+    📈 Trend: {{ s.trend_source }}
+  </div>
+  {% endif %}
+
+  <div class="card-label">📝 Caption</div>
+  <div class="card-text">{{ s.caption }}</div>
+
+  <div class="card-label">#️⃣ Hashtag Stratejisi</div>
+  <div class="hashtags">
+    {% for tag in s.hashtags %}
+    <span class="hashtag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+
+  {% if s.visual_concept %}
+  <div class="card-label">🎨 Görsel Konsept</div>
+  <div class="card-text">{{ s.visual_concept }}</div>
+  {% endif %}
+
+  {% if s.publish_time %}
+  <div class="time-box">
+    <strong>⏰ Yayın Zamanı:</strong> {{ s.publish_time }}
+    {% if s.publish_reason %}<br><span style="font-size: 12px; color: #6b7280;">{{ s.publish_reason }}</span>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if s.cta %}
+  <div class="cta-box">
+    <strong>💡 CTA:</strong> {{ s.cta }}
+  </div>
+  {% endif %}
+</div>

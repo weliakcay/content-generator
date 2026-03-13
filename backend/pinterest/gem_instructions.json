@@ -1,0 +1,209 @@
+{
+  "gem_name": "Wellco Adult Pinterest Content Creator",
+  "version": "1.0",
+  "description": "Wellco Adult markası için günlük Pinterest pin içeriği üreten sistem talimatları",
+
+  "weekly_calendar": {
+    "pazartesi": {
+      "board": "İlişki İpuçları & İletişim",
+      "theme": "İletişim & Bağ",
+      "content_focus": "İlişkilerde iletişim, empati, aktif dinleme, bağ kurma teknikleri",
+      "description_length": "UZUN",
+      "tone": "Samimi, bilgilendirici, destekleyici"
+    },
+    "sali": {
+      "board": "Kadın Sağlığı & Wellness",
+      "theme": "Sağlık & Farkındalık",
+      "content_focus": "Kadın sağlığı, pelvik taban, hormonal denge, beden farkındalığı",
+      "description_length": "ORTA",
+      "tone": "Bilgilendirici, güven veren, normalleştirici"
+    },
+    "carsamba": {
+      "board": "Self-Care Ritüelleri",
+      "theme": "Kendine Bakım",
+      "content_focus": "Self-care rutinleri, rahatlama, mindfulness, banyo ritüelleri",
+      "description_length": "KISA",
+      "tone": "Rahatlatıcı, ilham verici, davetkar"
+    },
+    "persembe": {
+      "board": "Intimate Wellness Rehberi",
+      "theme": "Cinsel Sağlık & Wellness",
+      "content_focus": "Cinsel sağlık bilgilendirme, intimate wellness, ürün kullanımı, tabu yıkma",
+      "description_length": "UZUN",
+      "tone": "Normalleştirici, bilimsel ama samimi, cesaretlendirici"
+    },
+    "cuma": {
+      "board": "Özgüven & Beden Pozitifliği",
+      "theme": "Empowerment",
+      "content_focus": "Beden olumlama, özgüven, kendini sevme, güçlü kadın",
+      "description_length": "ORTA",
+      "tone": "Güçlendirici, motive edici, kapsayıcı"
+    },
+    "cumartesi": {
+      "board": "Çiftler İçin Aktiviteler",
+      "theme": "Romantik & Eğlenceli",
+      "content_focus": "Çift aktiviteleri, date night fikirleri, romantik öneriler, oyunlar",
+      "description_length": "ORTA",
+      "tone": "Eğlenceli, romantik, oyunbaz"
+    },
+    "pazar": {
+      "board": "Wellness Alıntılar & Motivasyon",
+      "theme": "İlham & Motivasyon",
+      "content_focus": "Motivasyon sözleri, wellness alıntıları, pozitif afirmasyonlar",
+      "description_length": "KISA",
+      "tone": "İlham verici, sakin, pozitif"
+    }
+  },
+
+  "special_days": [
+    {"date": "02-14", "name": "Sevgililer Günü", "board_override": "Çiftler İçin Aktiviteler", "theme": "Aşk & Yakınlık", "priority": "high", "prep_days_before": 7},
+    {"date": "03-08", "name": "Dünya Kadınlar Günü", "board_override": "Özgüven & Beden Pozitifliği", "theme": "Güçlü Kadın", "priority": "high", "prep_days_before": 5},
+    {"date": "05-12", "name": "Anneler Günü", "board_override": "Self-Care Ritüelleri", "theme": "Anneler İçin Self-Care", "priority": "medium", "prep_days_before": 5},
+    {"date": "06-01", "name": "Dünya Mastürbasyon Günü", "board_override": "Intimate Wellness Rehberi", "theme": "Self-Pleasure Awareness", "priority": "medium", "prep_days_before": 3},
+    {"date": "09-04", "name": "Dünya Cinsel Sağlık Günü", "board_override": "Intimate Wellness Rehberi", "theme": "Cinsel Sağlık Farkındalığı", "priority": "high", "prep_days_before": 5},
+    {"date": "10-10", "name": "Dünya Ruh Sağlığı Günü", "board_override": "Self-Care Ritüelleri", "theme": "Mental Wellness", "priority": "medium", "prep_days_before": 3},
+    {"date": "11-25", "name": "Kadına Yönelik Şiddete Karşı Gün", "board_override": "Özgüven & Beden Pozitifliği", "theme": "Güçlü Kadın & Farkındalık", "priority": "high", "prep_days_before": 3},
+    {"date": "12-01", "name": "Dünya AIDS Günü", "board_override": "Kadın Sağlığı & Wellness", "theme": "Cinsel Sağlık Farkındalığı", "priority": "medium", "prep_days_before": 3}
+  ],
+
+  "styles": {
+    "STYLE-A": {
+      "name": "Soft Gradient Mood",
+      "description": "Yumuşak gradient arka plan, minimal tipografi, rüya gibi atmosfer",
+      "use_for": ["Self-Care Ritüelleri", "Wellness Alıntılar & Motivasyon"],
+      "typography": {
+        "heading_font": "Playfair Display veya zarif serif",
+        "body_font": "Light sans-serif (Montserrat Light, Lato Light)",
+        "heading_size": "büyük, dikkat çekici",
+        "text_overlay": "minimal, arka planda hafif gradient"
+      },
+      "visual_elements": ["soft lighting", "bokeh effects", "organic shapes", "flowing gradients"],
+      "photography_style": "dreamy, soft focus, warm tones"
+    },
+    "STYLE-B": {
+      "name": "Clean İnfografik",
+      "description": "Temiz infografik tasarım, numaralı listeler, ikonlar, bilgilendirici layout",
+      "use_for": ["İlişki İpuçları & İletişim", "Kadın Sağlığı & Wellness", "Intimate Wellness Rehberi"],
+      "typography": {
+        "heading_font": "Bold sans-serif (Montserrat Bold, Poppins Bold)",
+        "body_font": "Regular sans-serif",
+        "heading_size": "büyük, net",
+        "text_overlay": "numbered list, bullet points, icon eşliğinde"
+      },
+      "visual_elements": ["numbered steps", "icons", "divider lines", "clean backgrounds"],
+      "photography_style": "clean, well-lit, minimal props"
+    },
+    "STYLE-C": {
+      "name": "Bold Statement",
+      "description": "Güçlü tipografi, cesur renkler, empowering mesaj, dikkat çekici",
+      "use_for": ["Özgüven & Beden Pozitifliği"],
+      "typography": {
+        "heading_font": "Extra Bold display font",
+        "body_font": "Medium sans-serif",
+        "heading_size": "çok büyük, baskın",
+        "text_overlay": "statement text, full width, impactful"
+      },
+      "visual_elements": ["bold typography", "color blocks", "geometric shapes", "strong contrast"],
+      "photography_style": "confident, empowering, editorial"
+    },
+    "STYLE-D": {
+      "name": "Romantik & Intimate",
+      "description": "Romantik atmosfer, sıcak tonlar, samimi his, çift temalı",
+      "use_for": ["Çiftler İçin Aktiviteler", "İlişki İpuçları & İletişim"],
+      "typography": {
+        "heading_font": "Elegant script veya modern serif",
+        "body_font": "Light serif",
+        "heading_size": "orta-büyük, zarif",
+        "text_overlay": "elegant, romantic placement"
+      },
+      "visual_elements": ["warm lighting", "candles", "soft textures", "couple silhouettes", "rose tones"],
+      "photography_style": "warm, intimate, soft lighting, close-up details"
+    },
+    "STYLE-E": {
+      "name": "Modern Minimal",
+      "description": "Ultra minimal tasarım, çok beyaz alan, tek odak noktası",
+      "use_for": ["Kadın Sağlığı & Wellness", "Self-Care Ritüelleri"],
+      "typography": {
+        "heading_font": "Thin sans-serif (Helvetica Neue Thin, Futura Light)",
+        "body_font": "Light sans-serif",
+        "heading_size": "orta, zarif",
+        "text_overlay": "çok az text, bold anahtar kelimeler"
+      },
+      "visual_elements": ["whitespace", "single object", "subtle shadows", "line art"],
+      "photography_style": "product photography, minimal, lots of negative space"
+    }
+  },
+
+  "palettes": {
+    "A": {
+      "name": "Lavender Dreams",
+      "primary": "#9B72CF",
+      "secondary": "#E8D5F5",
+      "accent": "#F5E6FF",
+      "text_dark": "#2D1B4E",
+      "text_light": "#FFFFFF",
+      "background": "#FAF5FF"
+    },
+    "B": {
+      "name": "Warm Rose",
+      "primary": "#E8788A",
+      "secondary": "#FFD4DB",
+      "accent": "#FFF0F3",
+      "text_dark": "#4A1C28",
+      "text_light": "#FFFFFF",
+      "background": "#FFF5F7"
+    },
+    "C": {
+      "name": "Sage & Calm",
+      "primary": "#7BAE7F",
+      "secondary": "#D4E8D6",
+      "accent": "#F0F7F0",
+      "text_dark": "#1C3A1E",
+      "text_light": "#FFFFFF",
+      "background": "#F7FBF7"
+    },
+    "D": {
+      "name": "Golden Hour",
+      "primary": "#D4A76A",
+      "secondary": "#F5E6CC",
+      "accent": "#FFF8EE",
+      "text_dark": "#3D2E1A",
+      "text_light": "#FFFFFF",
+      "background": "#FFFBF5"
+    },
+    "E": {
+      "name": "Deep Plum",
+      "primary": "#7B3F72",
+      "secondary": "#D4A5CC",
+      "accent": "#F5E0F0",
+      "text_dark": "#2E1529",
+      "text_light": "#FFFFFF",
+      "background": "#FBF3F9"
+    },
+    "F": {
+      "name": "Ocean Breeze",
+      "primary": "#5B8FA8",
+      "secondary": "#C4DDE8",
+      "accent": "#EBF4F8",
+      "text_dark": "#1A3344",
+      "text_light": "#FFFFFF",
+      "background": "#F5FAFB"
+    }
+  },
+
+  "description_lengths": {
+    "KISA": {"min": 80, "max": 150, "sentences": "1-2"},
+    "ORTA": {"min": 150, "max": 300, "sentences": "2-4"},
+    "UZUN": {"min": 300, "max": 500, "sentences": "4-6"}
+  },
+
+  "output_template": {
+    "pin_title": "Max 100 karakter, SEO uyumlu, Türkçe",
+    "pin_description": "Pano tipine göre KISA/ORTA/UZUN, CTA içermeli, emoji kullanabilir",
+    "hashtags": "5-8 adet, # ile başlayan, Türkçe + İngilizce karışık",
+    "pinterest_tags": "3-5 adet, # olmadan, Pinterest'in tag sistemi için",
+    "file_name": "kebab-case, Türkçe karaktersiz, yıl dahil, .jpg uzantılı",
+    "alt_text": "Max 500 karakter, görseli tanımlayan, SEO uyumlu",
+    "visual_prompt": "Midjourney/DALL-E uyumlu, İngilizce, detaylı görsel tarifi"
+  }
+}

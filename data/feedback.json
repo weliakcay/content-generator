@@ -1,0 +1,61 @@
+{
+  "approved_suggestions": [
+    {
+      "id": "da8632a7",
+      "platform": "pinterest",
+      "content_type": "pin",
+      "title": "Self-Care Pazar Rutini",
+      "caption": "Pazar günleri sadece dinlenmek değil, kendine yatırım yapmak için. Wellco Adult ile wellness rutinine yeni bir boyut kat. Mumlar, rahatlatıcı müzik ve kendine ayırdığın özel bir an... Çünkü sen bunu h",
+      "hashtags": [
+        "#selfcare",
+        "#wellness",
+        "#pazargünü",
+        "#kendinebakim",
+        "#wellcoadult",
+        "#selfcaresunday",
+        "#intimatewellness",
+        "#sağlıklıyaşam",
+        "#özenbakım",
+        "#wellnessroutine",
+        "#kendinesevgi",
+        "#selflovesunday"
+      ],
+      "feedback_at": "2026-02-16 08:14:11",
+      "reason": "Çok güzel konsept"
+    }
+  ],
+  "rejected_suggestions": [],
+  "learning_patterns": {
+    "successful_captions": [
+      "kendine",
+      "pazar",
+      "günleri",
+      "sadece",
+      "dinlenmek",
+      "değil,",
+      "yatırım",
+      "yapmak",
+      "için.",
+      "wellco",
+      "adult",
+      "wellness",
+      "rutinine",
+      "yeni",
+      "boyut"
+    ],
+    "successful_hashtags": [
+      "#selfcare",
+      "#wellness",
+      "#pazargünü",
+      "#kendinebakim",
+      "#wellcoadult",
+      "#selfcaresunday",
+      "#intimatewellness",
+      "#sağlıklıyaşam",
+      "#özenbakım",
+      "#wellnessroutine"
+    ],
+    "successful_times": [],
+    "avoid_topics": []
+  }
+}

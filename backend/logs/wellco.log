@@ -1,0 +1,69 @@
+2026-02-15 22:59:27 | pipeline | INFO | ============================================================
+2026-02-15 22:59:27 | pipeline | INFO | Pipeline started at 2026-02-15T22:59:27.867756
+2026-02-15 22:59:27 | pipeline | INFO | ============================================================
+2026-02-15 22:59:27 | pipeline | INFO | Loading brand profile and tracking config...
+2026-02-15 22:59:27 | pipeline | INFO | Brand: Wellco Adult
+2026-02-15 22:59:27 | pipeline | INFO | Scraping skipped (--no-scrape)
+2026-02-15 22:59:27 | pipeline | INFO | Analyzing trends...
+2026-02-15 22:59:27 | trend_analyzer | WARNING | No trends to analyze
+2026-02-15 22:59:27 | pipeline | INFO | Top 0 trends selected
+2026-02-15 22:59:27 | pipeline | INFO | Loading learned patterns...
+2026-02-15 22:59:27 | pipeline | INFO | Generating content suggestions...
+2026-02-15 22:59:27 | prompt_builder | INFO | Prompt built: 2447 chars, 5 suggestions requested
+2026-02-15 22:59:27 | content_generator | WARNING | ANTHROPIC_API_KEY not set - generating mock suggestions
+2026-02-15 22:59:28 | content_generator | INFO | Suggestions saved to /Users/veliakcay/Documents/projeler/wellco-content-generato/data/suggestions/2026-02-15.json
+2026-02-15 22:59:28 | pipeline | INFO | Generated 5 suggestions
+2026-02-15 22:59:28 | pipeline | INFO | Email skipped (--no-email)
+2026-02-15 22:59:28 | pipeline | INFO | ============================================================
+2026-02-15 22:59:28 | pipeline | INFO | Pipeline completed in 0.1s
+2026-02-15 22:59:28 | pipeline | INFO | Suggestions: 5 | Trends: 0 | Email: skipped
+2026-02-15 22:59:28 | pipeline | INFO | ============================================================
+2026-02-16 17:24:54 | report_builder | INFO | Email report built: 5 suggestions
+2026-02-16 17:24:57 | email_sender | INFO | Email sent to weliakcay@gmail.com: Wellco Adult | 16 Şubat 2026, Pazartesi - Günlük İçerik Stratejisi
+2026-02-16 17:25:05 | pipeline | INFO | ============================================================
+2026-02-16 17:25:05 | pipeline | INFO | Pipeline started at 2026-02-16T17:25:05.964071
+2026-02-16 17:25:05 | pipeline | INFO | ============================================================
+2026-02-16 17:25:05 | pipeline | INFO | Loading brand profile and tracking config...
+2026-02-16 17:25:05 | pipeline | INFO | Brand: Wellco Adult
+2026-02-16 17:25:05 | pipeline | INFO | Scraping skipped (--no-scrape)
+2026-02-16 17:25:05 | pipeline | INFO | Analyzing trends...
+2026-02-16 17:25:05 | trend_analyzer | WARNING | No trends to analyze
+2026-02-16 17:25:05 | pipeline | INFO | Top 0 trends selected
+2026-02-16 17:25:05 | pipeline | INFO | Loading learned patterns...
+2026-02-16 17:25:05 | pattern_learner | INFO | Patterns loaded: 1 approved, 0 rejected
+2026-02-16 17:25:05 | pipeline | INFO | Generating content suggestions...
+2026-02-16 17:25:05 | prompt_builder | INFO | Prompt built: 2652 chars, 5 suggestions requested
+2026-02-16 17:26:21 | content_generator | INFO | Generated 5 suggestions via Claude API
+2026-02-16 17:26:21 | content_generator | INFO | Suggestions saved to ../data/suggestions/2026-02-16.json
+2026-02-16 17:26:21 | pipeline | INFO | Generated 5 suggestions
+2026-02-16 17:26:21 | pipeline | INFO | Email skipped (--no-email)
+2026-02-16 17:26:21 | pipeline | INFO | ============================================================
+2026-02-16 17:26:21 | pipeline | INFO | Pipeline completed in 75.7s
+2026-02-16 17:26:21 | pipeline | INFO | Suggestions: 5 | Trends: 0 | Email: skipped
+2026-02-16 17:26:21 | pipeline | INFO | ============================================================
+2026-02-17 21:56:55 | pinterest_client | INFO | GET https://api-sandbox.pinterest.com/v5/user_account
+2026-02-17 21:56:55 | pinterest_client | ERROR | Pinterest API error 401: {"code":3,"message":"Authorization failed."}
+2026-02-17 22:22:16 | pipeline | INFO | ============================================================
+2026-02-17 22:22:16 | pipeline | INFO | Pinterest pipeline started at 2026-02-17T22:22:16.389563
+2026-02-17 22:22:16 | pipeline | INFO | ============================================================
+2026-02-17 22:22:16 | style_manager | INFO | Selected style: STYLE-B (Clean İnfografik), palette: B (Warm Rose)
+2026-02-17 22:22:31 | pin_generator | INFO | Pin saved to ../data/pins/2026-02-17.json
+2026-02-17 22:22:31 | style_manager | INFO | Recorded: 2026-02-17 - STYLE-B/B
+2026-02-17 22:22:31 | topic_tracker | INFO | Recorded topic: 'Pelvik Taban Sağlığı' with 8 keywords
+2026-02-17 22:22:31 | pin_generator | INFO | Pin generated: 'Pelvik Taban Sağlığı: 5 Temel İşaret ve Ne Anlama Geldikleri' for Kadın Sağlığı & Wellness
+2026-02-17 22:22:31 | pipeline | INFO | Pin generated: 'Pelvik Taban Sağlığı: 5 Temel İşaret ve Ne Anlama Geldikleri'
+2026-02-17 22:22:31 | pipeline | INFO | Board: Kadın Sağlığı & Wellness | Style: STYLE-B/B
+2026-02-17 22:22:31 | pipeline | INFO | Email skipped (--no-email)
+2026-02-17 22:22:31 | pipeline | INFO | Pinterest pipeline completed in 15.5s
+2026-02-17 22:22:31 | pipeline | INFO | ============================================================
+2026-02-17 23:16:09 | email_sender | INFO | Email sent to weliakcay@gmail.com: Wellco Pinterest | 17 Şubat 2026, Salı - Bugünün Pin'i Hazır 📌
+2026-02-18 13:16:32 | style_manager | INFO | Selected style: STYLE-E (Modern Minimal), palette: A (Lavender Dreams)
+2026-02-18 13:16:48 | pin_generator | INFO | Pin saved to ../data/pins/2026-02-18.json
+2026-02-18 13:16:48 | style_manager | INFO | Recorded: 2026-02-18 - STYLE-E/A
+2026-02-18 13:16:48 | topic_tracker | INFO | Recorded topic: 'Self-Care Ritüelleri' with 8 keywords
+2026-02-18 13:16:48 | pin_generator | INFO | Pin generated: 'Self-Care Ritüelini Haftanın En Keyifli Anına Dönüştür ✨' for Self-Care Ritüelleri
+2026-02-18 14:18:16 | style_manager | INFO | Selected style: STYLE-A (Soft Gradient Mood), palette: D (Golden Hour)
+2026-02-18 14:18:41 | pin_generator | INFO | Pin saved to ../data/pins/2026-02-18.json
+2026-02-18 14:18:41 | style_manager | INFO | Recorded: 2026-02-18 - STYLE-A/D
+2026-02-18 14:18:41 | topic_tracker | INFO | Recorded topic: 'Gece Bakım Ritüeli' with 8 keywords
+2026-02-18 14:18:41 | pin_generator | INFO | Pin generated: '5 Dakikalık Gece Bakım Ritüeli: Kendinize Kaliteli Zaman Ayırın' for Self-Care Ritüelleri
