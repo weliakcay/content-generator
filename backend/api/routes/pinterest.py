@@ -52,6 +52,93 @@ def get_pins(brand_id: int = Query(1), date: Optional[str] = Query(None)) -> Dic
     return {"date": date, "pins": pins, "generated_at": pins[0].get("created_at")}
 
 
+class PinFeedbackRequest(BaseModel):
+    action: str  # "published" | "rejected"
+    brand_id: int = 1
+
+@router.post("/pins/{pin_id}/feedback")
+def pin_feedback(pin_id: str, req: PinFeedbackRequest) -> Dict[str, Any]:
+    """Record whether a pin was published or rejected. Used for weekly analysis."""
+    if req.action not in ("published", "rejected"):
+        raise HTTPException(status_code=400, detail="action must be 'published' or 'rejected'")
+    now = datetime.now().isoformat()
+    with db.get_cursor() as cur:
+        # Store in feedback table
+        cur.execute(
+            """INSERT INTO feedback (brand_id, suggestion_id, action, platform, content_type, feedback_at)
+               VALUES (?, ?, ?, 'pinterest', 'pin', ?)""",
+            (req.brand_id, pin_id, req.action, now),
+        )
+        # Also tag the pin itself with feedback
+        cur.execute(
+            "UPDATE pins SET special_day = COALESCE(special_day, '') WHERE id = ?",
+            (pin_id,),
+        )
+    return {"ok": True, "pin_id": pin_id, "action": req.action}
+
+
+@router.get("/analysis/weekly")
+def weekly_analysis(brand_id: int = Query(1)) -> Dict[str, Any]:
+    """Weekly performance report: published vs rejected, tag stats, board stats."""
+    with db.get_cursor() as cur:
+        # Last 7 days pins
+        cur.execute(
+            """SELECT p.id, p.date, p.board, p.pin_title, p.style_code, p.palette_code,
+                      p.pinterest_tags, p.keywords, f.action
+               FROM pins p
+               LEFT JOIN feedback f ON f.suggestion_id = p.id AND f.platform = 'pinterest'
+               WHERE p.brand_id = ? AND p.date >= date('now', '-7 days')
+               ORDER BY p.date DESC""",
+            (brand_id,),
+        )
+        rows = cur.fetchall()
+
+    pins = []
+    tag_counts: Dict[str, int] = {}
+    board_counts: Dict[str, Dict[str, int]] = {}
+    style_counts: Dict[str, int] = {}
+
+    for r in rows:
+        p = dict(r)
+        tags = json.loads(p.get("pinterest_tags") or "[]")
+        kws = json.loads(p.get("keywords") or "[]")
+        action = p.get("action") or "pending"
+
+        for tag in tags:
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+
+        board = p["board"]
+        if board not in board_counts:
+            board_counts[board] = {"published": 0, "rejected": 0, "pending": 0}
+        board_counts[board][action] = board_counts[board].get(action, 0) + 1
+
+        style = p.get("style_code", "?")
+        style_counts[style] = style_counts.get(style, 0) + 1
+
+        pins.append({
+            "id": p["id"], "date": p["date"], "board": board,
+            "title": p["pin_title"], "style": style,
+            "tags": tags, "keywords": kws, "action": action,
+        })
+
+    published = [p for p in pins if p["action"] == "published"]
+    rejected = [p for p in pins if p["action"] == "rejected"]
+    pending = [p for p in pins if p["action"] == "pending"]
+
+    return {
+        "period": "last_7_days",
+        "total_pins": len(pins),
+        "published": len(published),
+        "rejected": len(rejected),
+        "pending": len(pending),
+        "board_stats": board_counts,
+        "tag_usage": dict(sorted(tag_counts.items(), key=lambda x: -x[1])),
+        "style_usage": style_counts,
+        "published_pins": [p["title"] for p in published],
+        "rejected_pins": [{"title": p["title"], "board": p["board"]} for p in rejected],
+    }
+
+
 @router.get("/pins/dates")
 def get_pin_dates(brand_id: int = Query(1)) -> Dict[str, List[str]]:
     with db.get_cursor() as cur:
