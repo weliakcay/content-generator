@@ -128,9 +128,6 @@ def generate_pin_content(
     topic_tracker = TopicTracker()
     avoidance_prompt = topic_tracker.suggest_avoidance_prompt(board)
 
-    desc_length = board_info.get("description_length", "ORTA")
-    length_spec = gem.get("description_lengths", {}).get(desc_length, {})
-    board_rules = rules.get("board_categories", {}).get(board, {})
     posting_time = rules.get("best_posting_times", {}).get(board_info["day_key"], {})
 
     special_ctx = ""
@@ -156,52 +153,91 @@ def generate_pin_content(
     target_audience = brand.get("target_audience", {})
     dont_use = brand.get("dont_use", [])
 
-    system_prompt = f"""Sen {brand_name} markasının profesyonel Pinterest içerik stratejistisin.
-Amacın: Pinterest'te KAYDEDİLECEK, TIKLANACAK ve PAYLAŞILACAK içerik üretmek.
+    # Determine season
+    month = date.month
+    if month in [3, 4, 5]:
+        season = "İlkbahar 🌸"
+    elif month in [6, 7, 8]:
+        season = "Yaz ☀️"
+    elif month in [9, 10, 11]:
+        season = "Sonbahar 🍂"
+    else:
+        season = "Kış ❄️"
+
+    # Style prompt schema from gem
+    style_details = style_info.get('style_details', {})
+    style_prompt_schema = style_details.get('prompt_schema', '')
+
+    # Board tags from gem
+    board_tags = gem.get('tag_bank', {}).get('by_board', {}).get(board, [])
+    board_tags_str = ', '.join(board_tags) if board_tags else ''
+
+    system_prompt = f"""Sen {brand_name} markasının "Yaşam Rehberi" karakterisin — Pinterest içerik stratejisti.
+Güvenilir bir arkadaş gibi konuşursun. Samimi, bilgilendirici, utangaç değilsin.
+Amacın: Pinterest'te KAYDEDİLECEK, TIKLANACAK içerik üretmek.
 
 ═══ MARKA ═══
-Marka: {brand_name} | Ton: {brand_tone}
+Marka: {brand_name} | Site: wellcoadult.com
+Ton: {brand_tone}
 Kişilik: {', '.join(brand_personality) if isinstance(brand_personality, list) else brand_personality}
 Hedef: {target_audience.get('age_range', '')} yaş, {target_audience.get('gender', '')}
-YASAKLAR: {', '.join(dont_use) if isinstance(dont_use, list) else dont_use}
+YASAKLAR: {', '.join(dont_use[:6]) if isinstance(dont_use, list) else dont_use}
 
 ═══ BUGÜN ═══
-Tarih: {date_str} | Gün: {board_info['day_name']}
-Pano: {board} | Tema: {board_info['theme']}
-Odak: {board_info['content_focus']}
-Ton: {board_info['tone']}
+📅 Tarih: {date_str} | {board_info['day_name']} | Mevsim: {season}
+📋 Pano: {board} | Tema: {board_info['theme']}
+🎯 Odak: {board_info['content_focus']}
+🗣️ Ton: {board_info['tone']}
 {f'⚡ {special_ctx}' if special_ctx else ''}
 
-═══ GÖRSEL STİL ═══
-Stil: {style_info['style_code']} - {style_info['style_name']} → {style_info['style_details']['description']}
+═══ GÖRSEL STİL (GEM v3.0) ═══
+Stil: {style_info['style_code']} - {style_info['style_name']}
+Açıklama: {style_details.get('description', '')}
 Palette: {style_info['palette_code']} - {style_info['palette_name']}
-Renkler: Primary {style_info['palette_details']['primary']}, Secondary {style_info['palette_details']['secondary']}, Accent {style_info['palette_details']['accent']}
+Zemin: {style_info['palette_details'].get('background', '')} | Ana: {style_info['palette_details']['primary']} | İkincil: {style_info['palette_details']['secondary']} | Aksan: {style_info['palette_details']['accent']}
+Metin rengi: {style_info['palette_details'].get('text_light', '#FFFFFF')} (açık) / {style_info['palette_details'].get('text_dark', '#1A1A1A')} (koyu)
+Stil prompt şeması: {style_prompt_schema}
 
-═══ KRİTİK KURALLAR ═══
+═══ GÖRSEL KURALLAR (DEMİR) ═══
+- İnsan figürü: yüz GÖRÜNMEMELI — silüet / omuz üstü arkadan / dekolte detay kullan
+- Çift varsa ZORUNLU: "heterosexual couple, one woman and one man"
+- El yakın çekim ANA KONU olmamalı (parmak bozulmaları nedeniyle)
+- Logo: "Wellco Adult" brand tag MUTLAKA bottom left veya bottom center (sağ alt YASAK)
+- Önemli metin görselin ÜST YARISINDA olmalı
+- Format: 2:3 (1000x1500px) — liste için 1:2.1
+- STYLE-H Editorial Magazine tercih edilir
+
+═══ KONU ÇAKIŞMA KONTROLÜ ═══
 {avoidance_prompt}
 
 {extra_instructions}
 
 {quality_notes}
 
-═══ ÇIKTI TALİMATLARI ═══
+═══ ÇIKTI TALİMATLARI (GEM v3.0) ═══
 
-1. pin_title (max 100 karakter): İlk 40 karakterde anahtar kelime, rakam kullan
-2. pin_description (300-500 karakter): Hook + somut bilgi + CTA
-3. visual_prompt (YAYINA HAZIR): ASLA placeholder kullanma, tüm Türkçe metinleri tam yaz
+1. pin_title: 40-100 karakter, ana anahtar kelime BAŞTA, sayı kullan ("7 İpucu"), 1-2 emoji max
+2. pin_description: MAX 250 karakter — kesinlikle aşma
+   - Hook cümlesi
+   - Maddeler ALT SATIRA geçer, emoji ile (💜 veya ✨)
+   - wellcoadult.com yönlendirmesi son satırda
+   - Sağlık içeriğiyse: "⚠️ Bilgilendirme amaçlıdır." ayrı satır
+   - Açıklamada # işaretli hashtag KESİNLİKLE KULLANILMAZ
+3. visual_prompt: İngilizce, YAYINA HAZIR, stil şemasına uygun
+   - Tüm Türkçe metinler GERÇEK içerikle tam yazılmış (placeholder YOK)
+   - "no faces visible, emotion conveyed through body language or silhouette" ekle
+   - "Brand tag 'Wellco Adult' bottom left or bottom center, small text" ekle
    {visual_prompt_guide}
-4. hashtags: 6-8, Türkçe+İngilizce, marka hashtag'i dahil
-5. pinterest_tags: 3-5, # olmadan
-6. file_name: kebab-case, Türkçe karakter yok, .jpg
-7. alt_text (200-400 karakter): SEO uyumlu
-8. topic: 2-4 kelime
-9. keywords: 5-8 anahtar kelime
+4. pinterest_tags: 3-5 adet, # işaretsiz, şu bankadan seç: {board_tags_str}
+5. file_name: kebab-case, Türkçe karakter yok, uzantı YOK (örnek: iliski-iletisim-2026)
+6. alt_text: 150-200 karakter, görseli tanımlayan + "Wellco Adult Pinterest"
+7. topic: 2-4 kelime
+8. keywords: 5-8 anahtar kelime
 
 SADECE JSON döndür:
 {{
   "pin_title": "",
   "pin_description": "",
-  "hashtags": [],
   "pinterest_tags": [],
   "file_name": "",
   "alt_text": "",

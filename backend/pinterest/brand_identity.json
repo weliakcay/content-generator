@@ -2,18 +2,22 @@
   "brand_name": "Wellco Adult",
   "tagline": "Wellness Meets Intimacy",
   "website": "https://wellcoadult.com",
+  "character": "Yaşam Rehberi — Güvenilir bir arkadaş, bilgili ama asla bilgiçlik taslayan değil.",
 
   "brand_voice": {
-    "tone": "Samimi, bilgilendirici, empowering ama asla utangaç değil",
+    "tone": "Samimi, bilgilendirici, empowering — asla utangaç değil",
     "personality": [
-      "Güvenilir bir arkadaş gibi konuşur",
+      "Güvenilir arkadaş gibi konuşur",
       "Tabuları yıkar ama saygılı kalır",
       "Bilimsel bilgiyi anlaşılır dille aktarır",
       "Pozitif ve cesaretlendirici",
-      "Modern ve açık fikirli"
+      "Modern ve açık fikirli",
+      "Biz dili kullanır — okuyucuyla birliktelik hissi"
     ],
     "language": "Türkçe (günlük, samimi, anlaşılır)",
-    "emoji_usage": "Ölçülü - pin başına 2-4 emoji, gülücük yerine tematik emojiler (💜🌸✨🕯️)"
+    "emoji_usage": "Ölçülü — pin başına 2-4 emoji, tematik emojiler tercih (💜🌸✨🕯️)",
+    "positive_phrases": ["Biliyor muydunuz?", "Birlikte keşfedelim", "Bu çok normal", "Herkes merak eder", "Bilgi güçtür", "Bedeninizi tanıyın"],
+    "forbidden_phrases": ["Hemen satın al!", "Kaçırma!", "Yapmazsanız şöyle olur", "Hâlâ bilmiyorsanız...", "Kesin çözüm", "Garanti sonuç"]
   },
 
   "target_audience": {
@@ -25,7 +29,8 @@
       "Cinsel sağlık konusunda açık fikirli",
       "Wellness trendlerini takip eden",
       "İlişkilerinde kaliteyi arayan",
-      "Tabuları sorgulayan"
+      "Tabuları sorgulayan",
+      "Self-care oriented"
     ],
     "pain_points": [
       "Cinsel sağlık hakkında güvenilir bilgi bulmak zor",
@@ -37,39 +42,70 @@
 
   "visual_identity": {
     "primary_color": "#7B3F72",
-    "secondary_colors": ["#E8788A", "#9B72CF", "#D4A76A"],
-    "neutral_colors": ["#F5F0F0", "#2D2D2D", "#FFFFFF"],
-    "font_heading": "Playfair Display / Montserrat Bold",
-    "font_body": "Montserrat Light / Lato",
-    "style_keywords": ["elegant", "modern", "warm", "inclusive", "premium"],
-    "photography_mood": "Warm, soft, intimate ama asla müstehcen değil. Dolaylı anlatım, ışık-gölge oyunu, detay çekimler."
+    "palettes": {
+      "A_koyu_elegans": {"background": "#1A1A1A", "primary": "#E91E8C", "secondary": "#C0C0C0", "accent": "#E8B4C8", "text": "#FFFFFF"},
+      "B_sicak_pembe": {"background": "#FFE4E1", "primary": "#D4A5A5", "secondary": "#FFF8F0", "accent": "#E0B0B0", "text": "#3D3D3D"},
+      "C_sage_calm": {"background": "#FAFAFA", "primary": "#9CAF88", "secondary": "#E8DCC8", "accent": "#B8A9C9", "text": "#2D4A3E"},
+      "D_romantic_mood": {"background": "#2D1F3D", "primary": "#E8B4B8", "secondary": "#F7E7CE", "accent": "#D4AF37", "text": "#FFF8F0"}
+    },
+    "font_heading": "Playfair Display / Montserrat Bold / Cormorant Garamond / Libre Baskerville",
+    "font_body": "Montserrat Light / Open Sans / Lato / Nunito / Raleway",
+    "style_keywords": ["elegant", "modern", "warm", "inclusive", "premium", "editorial"],
+    "photography_mood": "Warm, soft, intimate — asla müstehcen değil. Dolaylı anlatım, ışık-gölge oyunu, detay çekimler.",
+    "preferred_style": "STYLE-H Editorial Magazine — dergi kapağı estetiği öncelikli"
+  },
+
+  "visual_rules": {
+    "human_figures": "Yüzler GÖRÜNMEMELI. no faces visible — emotion conveyed through body language or silhouette. Tercih: silüet figür, omuz üstü arkadan görünüm, boyun/dekolte parça çekim.",
+    "couple_figures": "Çift varsa ZORUNLU prompt: 'heterosexual couple, one woman and one man'",
+    "hand_rule": "El yakın çekim (hand close-up) ANA KONU olmamalı — yapay zekanın el anatomisi hataları nedeniyle. Eller destekleyici unsur olabilir.",
+    "logo_placement": "Brand tag 'Wellco Adult' MUTLAKA bottom left veya bottom center. Sağ alt KESİNLİKLE YASAK (Gemini indirme butonuyla çakışır).",
+    "logo_prompt": "Brand tag 'Wellco Adult' positioned bottom left or bottom center, small text, integrated into the image",
+    "forbidden_colors": ["#FF0000 (parlak kırmızı)", "Neon turuncu", "Pornografik çağrışım yapan renkler"]
   },
 
   "content_pillars": [
     {
       "name": "Intimate Wellness",
       "weight": 0.25,
-      "topics": ["cinsel sağlık", "intimate care", "pleasure wellness", "beden farkındalığı"]
+      "board": "Cinsel Sağlık Bilgileri",
+      "topics": ["cinsel sağlık", "intimate care", "pleasure wellness", "beden farkındalığı", "mit vs gerçek"]
     },
     {
       "name": "İlişki & İletişim",
       "weight": 0.20,
-      "topics": ["iletişim", "empati", "sevgi dili", "çift terapisi ipuçları", "bağ kurma"]
+      "board": "İlişki İpuçları & İletişim",
+      "topics": ["iletişim", "empati", "sevgi dili", "çift terapisi ipuçları", "bağ kurma", "güven"]
     },
     {
       "name": "Self-Care",
-      "weight": 0.20,
-      "topics": ["kendine bakım", "ritüel", "mindfulness", "rahatlama", "me-time"]
+      "weight": 0.15,
+      "board": "Öz Bakım & Ritüeller",
+      "topics": ["kendine bakım", "ritüel", "mindfulness", "rahatlama", "me-time", "uyku", "stres"]
     },
     {
       "name": "Kadın Sağlığı",
       "weight": 0.20,
+      "board": "Kadın Sağlığı & Wellness",
       "topics": ["pelvik taban", "hormonal sağlık", "menstrüel sağlık", "menopoz", "beden"]
     },
     {
       "name": "Empowerment",
-      "weight": 0.15,
+      "weight": 0.10,
+      "board": "Öz Güven & Beden Algısı",
       "topics": ["özgüven", "beden pozitifliği", "güçlü kadın", "tabu yıkma", "normalleştirme"]
+    },
+    {
+      "name": "Romantizm",
+      "weight": 0.05,
+      "board": "Romantizm & Çift Aktiviteleri",
+      "topics": ["date night", "sürpriz", "aktivite", "aşk", "yakınlık"]
+    },
+    {
+      "name": "Bilim & Araştırma",
+      "weight": 0.05,
+      "board": "Bilim & Araştırmalar",
+      "topics": ["araştırma", "istatistik", "bilim", "uzman görüşü", "global veriler"]
     }
   ],
 
@@ -77,16 +113,34 @@
     "Vulgar veya kaba dil",
     "Aşırı cinsel veya müstehcen ifadeler",
     "Utandırıcı veya yargılayıcı ton",
-    "Tıbbi tavsiye niteliğinde kesin ifadeler ('şifa verir', 'tedavi eder')",
+    "Tıbbi tavsiye niteliğinde kesin ifadeler ('şifa verir', 'tedavi eder', 'garanti sonuç')",
     "Rakip marka isimleri",
     "Politik veya bölücü içerik",
     "Body shaming veya karşılaştırma",
-    "Clickbait veya yanıltıcı başlıklar"
+    "Clickbait veya yanıltıcı başlıklar",
+    "Satış dili ve baskı ('Hemen satın al!', 'Kaçırma!')",
+    "Korkutucu ifadeler ('Yapmazsanız...')",
+    "Aşırı emoji kullanımı",
+    "Parlak kırmızı, neon renkler"
   ],
 
   "must_include": {
-    "every_pin": ["Marka hashtag'i: #wellcoadult", "CTA (kaydet, takip et, yorum yap)"],
-    "weekly": ["En az 1 eğitici/bilgilendirici içerik", "En az 1 ilham verici/motivasyon içeriği"],
-    "monthly": ["Ürün entegreli içerik (dolaylı, doğal)", "Kullanıcı etkileşimli içerik (soru, anket)"]
-  }
+    "every_pin": [
+      "wellcoadult.com yönlendirmesi açıklama sonunda",
+      "CTA — kaydet, incele veya site yönlendirmesi",
+      "Yasal uyarı sağlık içeriklerinde: '⚠️ Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.'"
+    ],
+    "weekly": [
+      "En az 1 eğitici/bilgilendirici içerik",
+      "En az 1 ilham verici/motivasyon içeriği",
+      "STYLE-H Editorial Magazine en az 2 kullanım"
+    ],
+    "monthly": [
+      "Ürün entegreli içerik (dolaylı, doğal)",
+      "Bilim & istatistik içeriği",
+      "Özel gün içeriği (varsa)"
+    ]
+  },
+
+  "brand_message": "Wellco Adult olarak inanıyoruz ki cinsel sağlık ve wellness, utanılacak değil, kutlanacak konular. Pinterest'te paylaştığımız her bilgi, daha mutlu, daha sağlıklı bir yaşama giden yolda küçük bir adım. Güvenilir bilgi, kaliteli ürünler ve sıcak bir topluluk için: wellcoadult.com — Çünkü kendinize ayırdığınız zaman, en değerli yatırımdır."
 }

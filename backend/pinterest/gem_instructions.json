@@ -1,209 +1,294 @@
 {
   "gem_name": "Wellco Adult Pinterest Content Creator",
-  "version": "1.0",
-  "description": "Wellco Adult markası için günlük Pinterest pin içeriği üreten sistem talimatları",
+  "version": "3.0",
+  "description": "Wellco Adult markası için günlük Pinterest pin içeriği üreten sistem talimatları - Gem v3.0",
 
   "weekly_calendar": {
     "pazartesi": {
       "board": "İlişki İpuçları & İletişim",
       "theme": "İletişim & Bağ",
-      "content_focus": "İlişkilerde iletişim, empati, aktif dinleme, bağ kurma teknikleri",
-      "description_length": "UZUN",
-      "tone": "Samimi, bilgilendirici, destekleyici"
+      "content_focus": "İlişkilerde iletişim, empati, aktif dinleme, bağ kurma teknikleri, güven inşa etme",
+      "description_length": "ORTA",
+      "tone": "Samimi, bilgilendirici, destekleyici",
+      "format": "İnfografik",
+      "default_style": "STYLE-H",
+      "default_palette": "B"
     },
     "sali": {
       "board": "Kadın Sağlığı & Wellness",
-      "theme": "Sağlık & Farkındalık",
-      "content_focus": "Kadın sağlığı, pelvik taban, hormonal denge, beden farkındalığı",
+      "theme": "Sağlık Bilgisi",
+      "content_focus": "Kadın sağlığı, pelvik taban, hormonal denge, menstrüel döngü, menopoz, beden farkındalığı",
       "description_length": "ORTA",
-      "tone": "Bilgilendirici, güven veren, normalleştirici"
+      "tone": "Bilgilendirici, güven veren, normalleştirici",
+      "format": "İnfografik",
+      "default_style": "STYLE-H",
+      "default_palette": "C"
     },
     "carsamba": {
-      "board": "Self-Care Ritüelleri",
-      "theme": "Kendine Bakım",
-      "content_focus": "Self-care rutinleri, rahatlama, mindfulness, banyo ritüelleri",
+      "board": "Öz Bakım & Ritüeller",
+      "theme": "Ritüel & Rahatlama",
+      "content_focus": "Self-care rutinleri, rahatlama, mindfulness, banyo ritüelleri, stres yönetimi, uyku",
       "description_length": "KISA",
-      "tone": "Rahatlatıcı, ilham verici, davetkar"
+      "tone": "Rahatlatıcı, ilham verici, davetkar",
+      "format": "Checklist/Liste",
+      "default_style": "STYLE-D",
+      "default_palette": "B"
     },
     "persembe": {
-      "board": "Intimate Wellness Rehberi",
-      "theme": "Cinsel Sağlık & Wellness",
-      "content_focus": "Cinsel sağlık bilgilendirme, intimate wellness, ürün kullanımı, tabu yıkma",
-      "description_length": "UZUN",
-      "tone": "Normalleştirici, bilimsel ama samimi, cesaretlendirici"
+      "board": "Cinsel Sağlık Bilgileri",
+      "theme": "Mit vs Gerçek / FAQ",
+      "content_focus": "Cinsel sağlık bilgilendirme, mit çürütme, anatomi, güvenli cinsellik, tabu yıkma",
+      "description_length": "ORTA",
+      "tone": "Normalleştirici, bilimsel ama samimi, cesaretlendirici",
+      "format": "İnfografik",
+      "default_style": "STYLE-A",
+      "default_palette": "A"
     },
     "cuma": {
-      "board": "Özgüven & Beden Pozitifliği",
-      "theme": "Empowerment",
-      "content_focus": "Beden olumlama, özgüven, kendini sevme, güçlü kadın",
-      "description_length": "ORTA",
-      "tone": "Güçlendirici, motive edici, kapsayıcı"
+      "board": "Romantizm & Çift Aktiviteleri",
+      "theme": "Date Night / Aktivite",
+      "content_focus": "Çift aktiviteleri, date night fikirleri, romantik öneriler, sürpriz fikirleri, yakınlık",
+      "description_length": "KISA",
+      "tone": "Eğlenceli, romantik, oyunbaz",
+      "format": "İlham Pini",
+      "default_style": "STYLE-F",
+      "default_palette": "D"
     },
     "cumartesi": {
-      "board": "Çiftler İçin Aktiviteler",
-      "theme": "Romantik & Eğlenceli",
-      "content_focus": "Çift aktiviteleri, date night fikirleri, romantik öneriler, oyunlar",
+      "board": "Bilim & Araştırmalar",
+      "theme": "İstatistik / Bilimsel Bulgu",
+      "content_focus": "Araştırma sonuçları, istatistikler, uzman görüşleri, global karşılaştırmalar, bilimsel veriler",
       "description_length": "ORTA",
-      "tone": "Eğlenceli, romantik, oyunbaz"
+      "tone": "Bilgilendirici, güvenilir, merak uyandırıcı",
+      "format": "Data Visualization",
+      "default_style": "STYLE-E",
+      "default_palette": "C"
     },
     "pazar": {
-      "board": "Wellness Alıntılar & Motivasyon",
-      "theme": "İlham & Motivasyon",
-      "content_focus": "Motivasyon sözleri, wellness alıntıları, pozitif afirmasyonlar",
+      "board": "Öz Güven & Beden Algısı",
+      "theme": "Motivasyon / Kabul",
+      "content_focus": "Beden pozitifliği, özgüven, iç ses, kendini kabul, güçlü kadın, pozitif afirmasyonlar",
       "description_length": "KISA",
-      "tone": "İlham verici, sakin, pozitif"
+      "tone": "Güçlendirici, motive edici, kapsayıcı",
+      "format": "Quote/İlham",
+      "default_style": "STYLE-C",
+      "default_palette": "B"
     }
   },
 
   "special_days": [
-    {"date": "02-14", "name": "Sevgililer Günü", "board_override": "Çiftler İçin Aktiviteler", "theme": "Aşk & Yakınlık", "priority": "high", "prep_days_before": 7},
-    {"date": "03-08", "name": "Dünya Kadınlar Günü", "board_override": "Özgüven & Beden Pozitifliği", "theme": "Güçlü Kadın", "priority": "high", "prep_days_before": 5},
-    {"date": "05-12", "name": "Anneler Günü", "board_override": "Self-Care Ritüelleri", "theme": "Anneler İçin Self-Care", "priority": "medium", "prep_days_before": 5},
-    {"date": "06-01", "name": "Dünya Mastürbasyon Günü", "board_override": "Intimate Wellness Rehberi", "theme": "Self-Pleasure Awareness", "priority": "medium", "prep_days_before": 3},
-    {"date": "09-04", "name": "Dünya Cinsel Sağlık Günü", "board_override": "Intimate Wellness Rehberi", "theme": "Cinsel Sağlık Farkındalığı", "priority": "high", "prep_days_before": 5},
-    {"date": "10-10", "name": "Dünya Ruh Sağlığı Günü", "board_override": "Self-Care Ritüelleri", "theme": "Mental Wellness", "priority": "medium", "prep_days_before": 3},
-    {"date": "11-25", "name": "Kadına Yönelik Şiddete Karşı Gün", "board_override": "Özgüven & Beden Pozitifliği", "theme": "Güçlü Kadın & Farkındalık", "priority": "high", "prep_days_before": 3},
+    {"date": "02-14", "name": "Sevgililer Günü", "board_override": "Romantizm & Çift Aktiviteleri", "theme": "Aşk & Yakınlık", "priority": "high", "prep_days_before": 10},
+    {"date": "03-08", "name": "Dünya Kadınlar Günü", "board_override": "Öz Güven & Beden Algısı", "theme": "Güçlü Kadın", "priority": "high", "prep_days_before": 5},
+    {"date": "03-21", "name": "Nowruz/Nevruz", "board_override": "Öz Bakım & Ritüeller", "theme": "Yenilenme & Öz Bakım", "priority": "medium", "prep_days_before": 3},
+    {"date": "05-12", "name": "Anneler Günü", "board_override": "Öz Bakım & Ritüeller", "theme": "Anneler İçin Self-Care", "priority": "medium", "prep_days_before": 5},
+    {"date": "06-01", "name": "Dünya Mastürbasyon Günü", "board_override": "Cinsel Sağlık Bilgileri", "theme": "Self-Pleasure Awareness", "priority": "medium", "prep_days_before": 3},
+    {"date": "06-21", "name": "Yaz Solstisi", "board_override": "Öz Güven & Beden Algısı", "theme": "Enerji & Özgüven", "priority": "low", "prep_days_before": 2},
+    {"date": "09-04", "name": "Dünya Cinsel Sağlık Günü", "board_override": "Cinsel Sağlık Bilgileri", "theme": "Cinsel Sağlık Farkındalığı", "priority": "high", "prep_days_before": 5},
+    {"date": "10-10", "name": "Dünya Ruh Sağlığı Günü", "board_override": "Öz Bakım & Ritüeller", "theme": "Mental Wellness", "priority": "medium", "prep_days_before": 3},
+    {"date": "11-14", "name": "Dünya Diyabet Günü", "board_override": "Kadın Sağlığı & Wellness", "theme": "Sağlık Bilinci", "priority": "low", "prep_days_before": 2},
+    {"date": "11-25", "name": "Kadına Yönelik Şiddete Karşı Gün", "board_override": "Öz Güven & Beden Algısı", "theme": "Güçlü Kadın & Farkındalık", "priority": "high", "prep_days_before": 3},
     {"date": "12-01", "name": "Dünya AIDS Günü", "board_override": "Kadın Sağlığı & Wellness", "theme": "Cinsel Sağlık Farkındalığı", "priority": "medium", "prep_days_before": 3}
   ],
 
+  "seasonal_themes": {
+    "ilkbahar": {"months": [3, 4, 5], "themes": ["Yenilenme", "Enerji", "Romantizm", "Taze Başlangıçlar"]},
+    "yaz": {"months": [6, 7, 8], "themes": ["Özgüven", "Beden Pozitifliği", "Tatil Romantizmi", "Coşku"]},
+    "sonbahar": {"months": [9, 10, 11], "themes": ["Sıcaklık", "Yakınlık", "İçe Dönük Ritüeller", "Huzur"]},
+    "kis": {"months": [12, 1, 2], "themes": ["Yakınlık", "Evde Aktiviteler", "Sıcak Atmosfer", "Derinleşme"]}
+  },
+
   "styles": {
     "STYLE-A": {
-      "name": "Soft Gradient Mood",
-      "description": "Yumuşak gradient arka plan, minimal tipografi, rüya gibi atmosfer",
-      "use_for": ["Self-Care Ritüelleri", "Wellness Alıntılar & Motivasyon"],
+      "name": "Sinematik Koyu",
+      "description": "Koyu zemin, dramatik ışık, silver/magenta vurgu. Güçlü mesajlar için.",
+      "use_for": ["Cinsel Sağlık Bilgileri"],
+      "photography_style": "cinematic dark, dramatic side lighting, moody atmosphere",
       "typography": {
-        "heading_font": "Playfair Display veya zarif serif",
-        "body_font": "Light sans-serif (Montserrat Light, Lato Light)",
-        "heading_size": "büyük, dikkat çekici",
-        "text_overlay": "minimal, arka planda hafif gradient"
+        "heading_font": "Playfair Display Bold",
+        "body_font": "Montserrat Light",
+        "heading_size": "büyük, dramatik"
       },
-      "visual_elements": ["soft lighting", "bokeh effects", "organic shapes", "flowing gradients"],
-      "photography_style": "dreamy, soft focus, warm tones"
+      "visual_elements": ["dark background", "dramatic lighting", "silver accents", "magenta rim light"],
+      "prompt_schema": "Cinematic dark editorial Pinterest pin design, deep charcoal background (#1A1A1A) with subtle gradient to pure black, dramatic side lighting with electric magenta (#E91E8C) rim light accent, cool silver (#C0C0C0) reflections and metallic highlights, luxury magazine aesthetic, moody atmosphere"
     },
     "STYLE-B": {
       "name": "Clean İnfografik",
-      "description": "Temiz infografik tasarım, numaralı listeler, ikonlar, bilgilendirici layout",
-      "use_for": ["İlişki İpuçları & İletişim", "Kadın Sağlığı & Wellness", "Intimate Wellness Rehberi"],
+      "description": "Temiz infografik tasarım, numaralı listeler, ikonlar, bilgilendirici layout.",
+      "use_for": ["İlişki İpuçları & İletişim", "Kadın Sağlığı & Wellness", "Bilim & Araştırmalar"],
+      "photography_style": "clean, well-lit, minimal props, organized grid",
       "typography": {
-        "heading_font": "Bold sans-serif (Montserrat Bold, Poppins Bold)",
-        "body_font": "Regular sans-serif",
-        "heading_size": "büyük, net",
-        "text_overlay": "numbered list, bullet points, icon eşliğinde"
+        "heading_font": "Montserrat Bold",
+        "body_font": "Open Sans Regular",
+        "heading_size": "büyük, net"
       },
-      "visual_elements": ["numbered steps", "icons", "divider lines", "clean backgrounds"],
-      "photography_style": "clean, well-lit, minimal props"
+      "visual_elements": ["numbered steps", "icons", "divider lines", "clean backgrounds", "grid layout"],
+      "prompt_schema": "Clean minimalist infographic Pinterest pin design, soft blush pink background (#FFE4E1) with warm cream (#FFF8F0) sections, organized grid layout, subtle dusty rose (#D4A5A5) divider lines, minimalist line art icons"
     },
     "STYLE-C": {
-      "name": "Bold Statement",
-      "description": "Güçlü tipografi, cesur renkler, empowering mesaj, dikkat çekici",
-      "use_for": ["Özgüven & Beden Pozitifliği"],
+      "name": "Soft Gradient",
+      "description": "Yumuşak pastel geçişler, minimal metin, ilham verici quote formatı.",
+      "use_for": ["Öz Güven & Beden Algısı"],
+      "photography_style": "dreamy, soft focus, warm tones, ethereal",
       "typography": {
-        "heading_font": "Extra Bold display font",
-        "body_font": "Medium sans-serif",
-        "heading_size": "çok büyük, baskın",
-        "text_overlay": "statement text, full width, impactful"
+        "heading_font": "Playfair Display Bold Italic",
+        "body_font": "Lato Light",
+        "heading_size": "orta-büyük, zarif"
       },
-      "visual_elements": ["bold typography", "color blocks", "geometric shapes", "strong contrast"],
-      "photography_style": "confident, empowering, editorial"
+      "visual_elements": ["soft gradients", "minimal text", "bokeh effects", "organic shapes"],
+      "prompt_schema": "Soft ethereal gradient Pinterest pin design, seamless gradient from soft blush (#FFE4E1) to lavender (#B8A9C9), no faces visible, dreamy feminine atmosphere"
     },
     "STYLE-D": {
-      "name": "Romantik & Intimate",
-      "description": "Romantik atmosfer, sıcak tonlar, samimi his, çift temalı",
-      "use_for": ["Çiftler İçin Aktiviteler", "İlişki İpuçları & İletişim"],
+      "name": "Moodboard Kolaj",
+      "description": "3-4 görsel bölüm, estetik düzen, ritüel ve atmosfer için.",
+      "use_for": ["Öz Bakım & Ritüeller"],
+      "photography_style": "aesthetic flat lay, intimate details, warm atmosphere",
       "typography": {
-        "heading_font": "Elegant script veya modern serif",
-        "body_font": "Light serif",
-        "heading_size": "orta-büyük, zarif",
-        "text_overlay": "elegant, romantic placement"
+        "heading_font": "Cormorant Garamond Bold",
+        "body_font": "Raleway Light",
+        "heading_size": "orta, zarif"
       },
-      "visual_elements": ["warm lighting", "candles", "soft textures", "couple silhouettes", "rose tones"],
-      "photography_style": "warm, intimate, soft lighting, close-up details"
+      "visual_elements": ["multi-section layout", "warm textures", "candles", "silk", "botanicals"],
+      "prompt_schema": "Aesthetic moodboard collage Pinterest pin design, 3-4 image sections (candle flame, bath with petals, silk robe detail, skincare), cohesive palette, intimate mood, no explicit content"
     },
     "STYLE-E": {
-      "name": "Modern Minimal",
-      "description": "Ultra minimal tasarım, çok beyaz alan, tek odak noktası",
-      "use_for": ["Kadın Sağlığı & Wellness", "Self-Care Ritüelleri"],
+      "name": "Data Visualization",
+      "description": "Büyük rakamlar/istatistikler, grafik, chart. Bilim panosu için.",
+      "use_for": ["Bilim & Araştırmalar"],
+      "photography_style": "data-driven, scientific credibility, clean layout",
       "typography": {
-        "heading_font": "Thin sans-serif (Helvetica Neue Thin, Futura Light)",
-        "body_font": "Light sans-serif",
-        "heading_size": "orta, zarif",
-        "text_overlay": "çok az text, bold anahtar kelimeler"
+        "heading_font": "Montserrat Bold",
+        "body_font": "Playfair Display",
+        "heading_size": "çok büyük, baskın rakamlar"
       },
-      "visual_elements": ["whitespace", "single object", "subtle shadows", "line art"],
-      "photography_style": "product photography, minimal, lots of negative space"
+      "visual_elements": ["large statistics", "charts", "bar graphs", "circular progress", "data points"],
+      "prompt_schema": "Modern data visualization Pinterest pin design, clean off-white background (#FAFAFA), sage green (#9CAF88) accents, main statistic very large and prominent, scientific credibility"
+    },
+    "STYLE-F": {
+      "name": "Silhouette Art",
+      "description": "Çift silüeti, romantik atmosfer, rose gold ışık. Romantizm panosu için.",
+      "use_for": ["Romantizm & Çift Aktiviteleri"],
+      "photography_style": "romantic silhouette, warm backlighting, cinematic",
+      "typography": {
+        "heading_font": "Libre Baskerville Italic",
+        "body_font": "Raleway Light",
+        "heading_size": "orta-büyük, zarif"
+      },
+      "visual_elements": ["couple silhouettes", "rose gold edge lighting", "bokeh background", "romantic scene"],
+      "prompt_schema": "Romantic silhouette art Pinterest pin design, deep plum gradient (#2D1F3D to #1A1025), SILHOUETTE SCENE: heterosexual couple - one woman and one man, silhouettes in pure black with rose gold (#E8B4B8) edge lighting, no faces visible, tasteful and artistic"
+    },
+    "STYLE-G": {
+      "name": "Abstract Minimal",
+      "description": "Soyut formlar, line art, tıbbi olmayan. Sağlık içerikleri için.",
+      "use_for": ["Kadın Sağlığı & Wellness", "Cinsel Sağlık Bilgileri"],
+      "photography_style": "abstract wellness, elegant line art, not clinical",
+      "typography": {
+        "heading_font": "Montserrat SemiBold",
+        "body_font": "Open Sans Regular",
+        "heading_size": "orta, net"
+      },
+      "visual_elements": ["flowing organic curves", "abstract body forms", "line art", "NOT clinical"],
+      "prompt_schema": "Abstract minimalist Pinterest pin design, clean white (#FFFFFF) with warm cream (#FFF8F0) gradient, flowing organic curves and abstract body forms (NOT clinical), dusty rose (#D4A5A5) and cool silver (#C0C0C0), elegant line art, wellness aesthetic NOT hospital aesthetic"
+    },
+    "STYLE-H": {
+      "name": "Editorial Magazine",
+      "description": "Dergi kapağı estetiği, bold tipografi, yüksek kontrast. ÖNCELİKLİ STİL.",
+      "use_for": ["İlişki İpuçları & İletişim", "Kadın Sağlığı & Wellness", "Öz Güven & Beden Algısı"],
+      "photography_style": "high-end editorial, Vogue/Elle aesthetic, bold typographic composition",
+      "typography": {
+        "heading_font": "Playfair Display Bold",
+        "body_font": "Montserrat Light uppercase letter-spacing",
+        "heading_size": "çok büyük - görselin %60'ı"
+      },
+      "visual_elements": ["bold typography as main visual", "asymmetric layout", "intentional white space", "high contrast", "paper grain texture"],
+      "prompt_schema": "High-end editorial magazine Pinterest pin design, bold typographic composition as main visual, subtle texture overlay (paper grain or soft noise), asymmetric modern layout, intentional white space, high contrast, cinematic lighting, Vogue/Elle magazine cover aesthetic"
     }
   },
 
   "palettes": {
     "A": {
-      "name": "Lavender Dreams",
-      "primary": "#9B72CF",
-      "secondary": "#E8D5F5",
-      "accent": "#F5E6FF",
-      "text_dark": "#2D1B4E",
+      "name": "Koyu Elegans",
+      "description": "Marka ana paleti. Ürün, cinsel wellness, güçlü mesajlar için.",
+      "primary": "#E91E8C",
+      "secondary": "#C0C0C0",
+      "accent": "#E8B4C8",
+      "text_dark": "#0D0D0D",
       "text_light": "#FFFFFF",
-      "background": "#FAF5FF"
+      "background": "#1A1A1A"
     },
     "B": {
-      "name": "Warm Rose",
-      "primary": "#E8788A",
-      "secondary": "#FFD4DB",
-      "accent": "#FFF0F3",
-      "text_dark": "#4A1C28",
+      "name": "Sıcak Pembe",
+      "description": "Soft & welcoming. Self-care, kadın sağlığı, öz güven, ilham için.",
+      "primary": "#D4A5A5",
+      "secondary": "#FFF8F0",
+      "accent": "#E0B0B0",
+      "text_dark": "#3D3D3D",
       "text_light": "#FFFFFF",
-      "background": "#FFF5F7"
+      "background": "#FFE4E1"
     },
     "C": {
       "name": "Sage & Calm",
-      "primary": "#7BAE7F",
-      "secondary": "#D4E8D6",
-      "accent": "#F0F7F0",
-      "text_dark": "#1C3A1E",
+      "description": "Doğal wellness. Sağlık bilgisi, araştırma, sakinleştirici içerik için.",
+      "primary": "#9CAF88",
+      "secondary": "#E8DCC8",
+      "accent": "#B8A9C9",
+      "text_dark": "#2D4A3E",
       "text_light": "#FFFFFF",
-      "background": "#F7FBF7"
+      "background": "#FAFAFA"
     },
     "D": {
-      "name": "Golden Hour",
-      "primary": "#D4A76A",
-      "secondary": "#F5E6CC",
-      "accent": "#FFF8EE",
-      "text_dark": "#3D2E1A",
+      "name": "Romantic Mood",
+      "description": "Atmosfer & ilişki. Romantizm, çift aktiviteleri, atmosfer için.",
+      "primary": "#E8B4B8",
+      "secondary": "#F7E7CE",
+      "accent": "#D4AF37",
+      "text_dark": "#FFF8F0",
       "text_light": "#FFFFFF",
-      "background": "#FFFBF5"
-    },
-    "E": {
-      "name": "Deep Plum",
-      "primary": "#7B3F72",
-      "secondary": "#D4A5CC",
-      "accent": "#F5E0F0",
-      "text_dark": "#2E1529",
-      "text_light": "#FFFFFF",
-      "background": "#FBF3F9"
-    },
-    "F": {
-      "name": "Ocean Breeze",
-      "primary": "#5B8FA8",
-      "secondary": "#C4DDE8",
-      "accent": "#EBF4F8",
-      "text_dark": "#1A3344",
-      "text_light": "#FFFFFF",
-      "background": "#F5FAFB"
+      "background": "#2D1F3D"
     }
   },
 
+  "typography_rotation": {
+    "1": {"heading": "Playfair Display", "body": "Open Sans"},
+    "2": {"heading": "Montserrat", "body": "Lato"},
+    "3": {"heading": "Cormorant Garamond", "body": "Nunito"},
+    "4": {"heading": "Libre Baskerville", "body": "Open Sans"}
+  },
+
   "description_lengths": {
-    "KISA": {"min": 80, "max": 150, "sentences": "1-2"},
-    "ORTA": {"min": 150, "max": 300, "sentences": "2-4"},
-    "UZUN": {"min": 300, "max": 500, "sentences": "4-6"}
+    "KISA": {"min": 100, "max": 200, "sentences": "1-2", "note": "Hook + 1-2 değer + wellcoadult.com"},
+    "ORTA": {"min": 150, "max": 250, "sentences": "2-3", "note": "Hook + 2-3 madde (alt satır) + wellcoadult.com"}
+  },
+
+  "tag_bank": {
+    "general": ["cinsel sağlık", "kadın sağlığı", "ilişki ipuçları", "öz bakım", "wellness", "motivasyon", "zihinsel sağlık"],
+    "by_board": {
+      "İlişki İpuçları & İletişim": ["Sağlıklı İlişki Tavsiyesi", "İlişki Tavsiyesi", "Uyumlu Çiftler", "randevu fikirleri"],
+      "Kadın Sağlığı & Wellness": ["cinsel sağlık", "zihinsel sağlık", "kişisel hijyen", "kadınlar için fitness"],
+      "Öz Bakım & Ritüeller": ["sabah rutini", "zihinsel sağlık", "motivasyon", "kişisel hijyen"],
+      "Cinsel Sağlık Bilgileri": ["cinsel sağlık", "Sağlıklı İlişki Tavsiyesi", "bilim"],
+      "Romantizm & Çift Aktiviteleri": ["randevu gecesi", "randevu fikirleri", "Uyumlu Çiftler", "Sağlıklı İlişki Tavsiyesi"],
+      "Bilim & Araştırmalar": ["bilim", "cinsel sağlık", "zihinsel sağlık"],
+      "Öz Güven & Beden Algısı": ["motivasyon", "zihinsel sağlık", "kadınlar için fitness"]
+    }
+  },
+
+  "visual_rules": {
+    "human_figures": "Yüzler görünmemeli. Silüet, omuz üstü (arkadan), dekolte/boyun gibi parça çekimler tercih et.",
+    "couple_figures": "Çift varsa MUTLAKA: heterosexual couple, one woman and one man",
+    "no_hand_closeup": "El yakın çekim ANA KONU olmamalı. Destekleyici unsur olabilir.",
+    "logo_placement": "Brand tag 'Wellco Adult' MUTLAKA bottom left veya bottom center. Sağ alt YASAK (Gemini butonuyla çakışır).",
+    "preferred_style": "STYLE-H Editorial Magazine her zaman öncelikli stil.",
+    "image_ratio": "Standart: 2:3 (1000x1500px). Liste/Tutorial: 1:2.1 (1000x2100px). Detaylı rehber: 1:3 (1000x3000px).",
+    "text_position": "Önemli metin görselin ÜST YARISINDA olmalı (feed'de kesilmesin)."
   },
 
   "output_template": {
-    "pin_title": "Max 100 karakter, SEO uyumlu, Türkçe",
-    "pin_description": "Pano tipine göre KISA/ORTA/UZUN, CTA içermeli, emoji kullanabilir",
-    "hashtags": "5-8 adet, # ile başlayan, Türkçe + İngilizce karışık",
-    "pinterest_tags": "3-5 adet, # olmadan, Pinterest'in tag sistemi için",
-    "file_name": "kebab-case, Türkçe karaktersiz, yıl dahil, .jpg uzantılı",
-    "alt_text": "Max 500 karakter, görseli tanımlayan, SEO uyumlu",
-    "visual_prompt": "Midjourney/DALL-E uyumlu, İngilizce, detaylı görsel tarifi"
+    "file_name": "kebab-case anahtar kelimeler, Türkçe karakter yok, uzantı YOK (ör: iliski-iletisim-ipuclari-2026)",
+    "pin_title": "40-100 karakter, ana anahtar kelime başta, sayı kullan ('7 İpucu'), 1-2 emoji max",
+    "pin_description": "Max 200-250 karakter. Açıklamada # işaretli hashtag KULLANILMAZ. Hook + maddeler alt satırda emoji ile + wellcoadult.com",
+    "hashtags": "Açıklama alanında KULLANILMAZ. Ayrı alan.",
+    "pinterest_tags": "3-5 adet, # işaretsiz, tag bankasından seç",
+    "alt_text": "150-200 karakter, görseli tanımlayan cümle + anahtar kelimeler + 'Wellco Adult Pinterest'",
+    "visual_prompt": "İngilizce, STYLE şemasına uygun, tüm Türkçe metinler tam yazılmış, placeholder YOK"
   }
 }

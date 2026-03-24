@@ -1,5 +1,24 @@
 {
-  "extra_instructions": "Her pin için somut, uygulanabilir bilgi ver. Genel motivasyon cümleleri yerine okuyucunun hayatında uygulayabileceği pratik ipuçları sun. Pin'i kaydeden kişi tekrar dönüp bakacak kadar değerli içerik üret.",
-  "quality_notes": "KALİTE KONTROL:\n- Açıklama minimum 300 karakter olmalı\n- Her pin'de en az 3 somut ipucu/bilgi olmalı\n- 'Daha fazla bilgi için takip et' gibi boş CTA'lar YASAK, bunun yerine spesifik değer vaat et\n- Görsel prompt'ta ASLA placeholder/örnek metin kullanma, gerçek içerik yaz",
-  "visual_prompt_guide": "- Infographic için: Her step/madde için GERÇEK Türkçe metin yaz (ör: '1. Partnerinize gün içinde en az 3 kez göz teması kurun')\n- Quote için: Tam Türkçe alıntı metnini yaz (ör: 'Kendini sevmek, başkalarını sevmenin ilk adımıdır')\n- Lifestyle için: Sahnedeki her objeyi, rengi, ışığı, atmosferi detaylı tarif et\n- Marka logosu veya adı görselde OLMAMALI\n- Text overlay max görselin %25'i kadar alan kaplamalı"
+  "extra_instructions": "Her pin için somut, uygulanabilir bilgi ver. Vaadi karşıla: başlıkta '5 yol' diyorsan 5 madde yaz. Boş yönlendirme yasak — önce değeri ver, sonra siteye çek. Maddeler ALT SATIRA geçer, emoji ile başlar, aralarında boşluk bırakılır. Tekrar yasağı: aynı konuyu 45 gün içinde işleme.",
+
+  "quality_notes": "KALİTE KONTROL:\n- Pin başlığı 40-100 karakter, ana anahtar kelime BAŞTA, sayı kullan\n- Açıklama MAX 250 karakter — kesinlikle aşma\n- Açıklamada # işaretli hashtag KULLANILMAZ (temiz metin)\n- Maddeler alt satıra geçer, emoji ile (💜 veya ✨)\n- wellcoadult.com yönlendirmesi ZORUNLU\n- Sağlık içeriğinde yasal uyarı ekle: '⚠️ Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.'\n- dosya_adı uzantısız kebab-case (örnek: iliski-iletisim-2026, .jpg YOK)\n- Satış dili, korkutucu ifade, yargılayıcı ton YASAK",
+
+  "visual_prompt_guide": "GÖRSEL PROMPT KURALLARI:\n- STYLE-H Editorial Magazine ÖNCELİKLİ stil\n- İnsan figürü: yüz görünmemeli — silüet / omuz üstü arkadan / dekolte detay\n- Çift varsa ZORUNLU: 'heterosexual couple, one woman and one man'\n- El yakın çekim ANA KONU olmamalı\n- Logo: 'Wellco Adult' brand tag MUTLAKA bottom left veya bottom center (sağ alt YASAK)\n- Tüm Türkçe metinleri GERÇEK içerikle yaz, placeholder kullanma\n- Örnek iyi format: 'Brand tag Wellco Adult bottom left, small silver text, integrated into image'\n- Format: 2:3 standart (1000x1500px), liste için 1:2.1\n- Önemli metin görselin üst yarısında olmalı",
+
+  "description_format": "AÇIKLAMA FORMAT ŞABLONU:\n\nKISA (150-200 karakter):\n[Hook cümlesi].\n\n[1-2 değer maddesi]\n\nDaha fazlası için: wellcoadult.com\n\nORTA (200-250 karakter):\n[Hook cümlesi].\n\n[Emoji] [Madde 1]\n[Emoji] [Madde 2]\n[Emoji] [Madde 3]\n\nDaha fazlası için: wellcoadult.com",
+
+  "hashtag_rules": "Hashtag'ler AÇIKLAMADA DEĞİL, ayrı 'pinterest_tags' alanında # işaretsiz yaz. 3-5 tag. Tag bankasından seç: Sağlıklı İlişki Tavsiyesi, İlişki Tavsiyesi, Uyumlu Çiftler, cinsel sağlık, randevu gecesi, randevu fikirleri, motivasyon, kadınlar için fitness, bilim, zihinsel sağlık, kişisel hijyen, sabah rutini",
+
+  "seo_keywords": {
+    "general": ["cinsel sağlık", "kadın sağlığı", "ilişki ipuçları", "çift iletişimi", "öz bakım", "self care", "wellness", "sağlıklı ilişki", "romantizm", "beden pozitifliği", "öz güven"],
+    "by_board": {
+      "ilişki": ["iletişim teknikleri", "empati", "güven", "duygusal bağ"],
+      "kadın sağlığı": ["hormon", "döngü", "menopoz", "pelvik taban"],
+      "öz bakım": ["rahatlama", "stres", "uyku", "mindfulness", "ritüel"],
+      "cinsel sağlık": ["cinsellik", "mit", "gerçek", "eğitim", "anatomi"],
+      "romantizm": ["date night", "sürpriz", "aktivite", "aşk"],
+      "bilim": ["araştırma", "istatistik", "bilim", "uzman"],
+      "öz güven": ["beden algısı", "kendini sevmek", "kabul"]
+    }
+  }
 }
